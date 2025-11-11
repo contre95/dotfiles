@@ -1,0 +1,172 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono";
+  font-size: 15px;
+  border-radius: 0px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  /* min-height: 8px; */
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  /* background: rgba(0, 0, 0, 0.5); */
+  padding: 0 5px;
+  margin: 0 10px;
+  border-radius: 15px;
+}
+
+.modules-left {
+  padding: 0;
+}
+
+window > box {
+  margin: 5px 5px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0px;
+  padding: 0px;
+  color: white;
+}
+
+#custom-kbd,
+#custom-hypr {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+
+.modules-center {
+  padding: 0 10px;
+}
+
+window#waybar {
+  background: transparent;
+  margin: 0;
+}
+
+#custom-kbd,
+#custom-hypr {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+
+#workspaces {
+  /* background-color: #292929; */
+  color: #f1f1f1;
+  margin-left: 5px;
+  /* padding-right: 10px; */
+}
+
+tooltip {
+  background: #24273a;
+  opacity: 0.8;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #181926;
+}
+
+tooltip label {
+  color: #cad3f5;
+}
+
+#custom-arch {
+  font-size: 20px;
+  color: #aab4f0;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+#workspaces button {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 4px 4px;
+}
+
+#workspaces button.empty {
+  color: #2e3440;
+}
+
+#workspaces button.visible {
+  color: #ffffff;
+}
+
+#workspaces button.urgent {
+  color: #524acb;
+}
+
+#workspaces button.hidden {
+  color: #524acb;
+}
+
+#workspaces button.active {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #7a81a9;
+}
+
+#custom-btc,
+#custom-ip,
+#custom-audio,
+#custom-recorder,
+#custom-music,
+#custom-pacman,
+#custom-power_profile,
+#backlight,
+#backlight-slider,
+#clock,
+#wireplumber,
+#custom-notification #bluetooth,
+#network,
+#battery,
+#disk,
+#memory,
+#cpu,
+#temperature {
+  /* background-color: KGB(0, 0, 0, 0.5); */
+  /* background: #11111b; */
+  color: #ffffff;
+  /* border-radius: 10px; */
+  padding-left: 7px;
+  padding-right: 7px;
+  margin: 5px;
+}
+
+#clock {
+  margin-right: 5px;
+}
+
+#backlight-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#backlight-slider trough {
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: black;
+}
+
+#backlight-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: red;
+}
+
+/* #custom-wg { */
+/*   background-image: url('/home/canus/library/icons/wg.svg'); */
+/*   background-position: center; */
+/*   background-repeat: no-repeat; */
+/*   background-size: 25px;  */
+/* } */

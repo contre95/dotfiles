@@ -1,0 +1,13 @@
+[Unit]
+Description=ShaderWebServer
+After=network.target 
+
+[Service]
+Type=simple
+Restart=always
+ExecSearchPath=/home/canus/bin/:/home/server/bin/:/usr/bin/
+ExecStart=http-cmd
+
+[Install]
+WantedBy=default.target
+

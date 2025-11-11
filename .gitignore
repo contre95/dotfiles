@@ -1,0 +1,11 @@
+code/
+*.mp4
+.mp4
+exports/
+homelab/
+pass/
+music/
+mounts/
+**/result
+documents/
+dotfiles/nvim/lazy-lock.json

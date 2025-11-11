@@ -1,0 +1,89 @@
+# import = [ "~/.config/alacritty/themes/gruvbox_material_medium.toml"]
+# import = [ "~/.config/alacritty/themes/ayu_dark.toml"]
+# colors.draw_bold_text_with_bright_colors = true
+[general]
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+# [window]
+# opacity = 0.5
+
+[window.padding]
+  x = 10
+  y = 10
+
+# This guy: https://github.com/fatih/dotfiles/blob/cd5fed7106b29c0cbe722d0ee59c44d588872df7/alacritty.toml#L86
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001b[1;5D"
+key = "Left"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001b[1;5C"
+key = "Right"
+mods = "Control"
+
+
+[scrolling]
+history = 10_000
+multiplier = 3
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[cursor]
+blink_interval = 500
+unfocused_hollow = true
+thickness = 0.15
+
+  [cursor.style]
+  shape = "Beam"
+  blinking = "Always"
+
+[font]
+size = 11
+
+  [font.normal]
+  family = "JetBrainsMono NF"
+  style = "Regular"
+
+  [font.bold]
+  family = "JetBrainsMono NF"
+  style = "Bold"
+
+  [font.italic]
+  family = "JetBrainsMono NF"
+  style = "Italic"
+
+  [font.bold_italic]
+  family = "JetBrainsMono NF"
+  style = "Bold Italic"
+
+  [font.offset]
+  x = 0
+  y = 0
+
+  [font.glyph_offset]
+  x = 0
+  y = 0
+
+[mouse]
+hide_when_typing = true
