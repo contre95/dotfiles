@@ -14,6 +14,7 @@
     # Git
     gh 
     gh-dash
+    git-filter-repo
 
     # Nix
     nil
