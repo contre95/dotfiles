@@ -105,6 +105,7 @@
     # sql
     sqlite
     sqlfluff
+    sqls
     mycli
 
     # css

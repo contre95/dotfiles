@@ -49,11 +49,13 @@ local handlers = {
 	["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
 	["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
+
 vim.diagnostic.config({
+	-- virtual_lines = true,
 	virtual_text = true,
-	float = {
-		border = "rounded",
-	},
+	-- float = {
+	-- 	border = "rounded",
+	-- },
 })
 
 -- Define capabilities with cmp_nvim_lsp
@@ -125,19 +127,23 @@ return {
 				filetypes = { "shell", "bash", "zsh", "sh" },
 			}
 
-			-- Gopls setup
+			-- -- Gopls setup
 			vim.lsp.config["gopls"] = {
-				capabilities = capabilities,
-				handlers = handlers,
-				filetypes = { "go", "gomod", "gowork", "gotmpl" },
 				cmd = { "gopls" },
-				root_dir = require("lspconfig/util").root_pattern("go.work", "go.mod", ".git"),
+				root_markers = { ".git", "go.mod", "go.work" },
+				filetypes = { "go", "gomod", "gowork", "gotmpl" },
 				settings = {
 					gopls = {
 						completeUnimported = true,
 						usePlaceholders = true,
 						analyses = {
 							unusedparams = true,
+						},
+						["ui.inlayhint.hints"] = {
+							compositeLiteralFields = true,
+							constantValues = true,
+							parameterNames = true,
+							rangeVariableTypes = true,
 						},
 					},
 				},
@@ -239,7 +245,7 @@ return {
 			}
 
 			-- SQL Language Server setup
-			vim.lsp.config["sqlls"] = {
+			vim.lsp.config["sqls"] = {
 				capabilities = capabilities,
 				handlers = handlers,
 				filetypes = { "sql", "pgsql", "mysql" },
@@ -309,6 +315,25 @@ return {
 					},
 				},
 			}
+
+			-- Enable LSP servers
+			vim.lsp.enable("ts_ls")
+			vim.lsp.enable("pyright")
+			vim.lsp.enable("tflint")
+			vim.lsp.enable("terraformls")
+			vim.lsp.enable("rust_analyzer")
+			vim.lsp.enable("bashls")
+			vim.lsp.enable("gopls")
+			vim.lsp.enable("docker_compose_language_service")
+			vim.lsp.enable("jsonls")
+			vim.lsp.enable("yamlls")
+			vim.lsp.enable("sqlls")
+			vim.lsp.enable("html")
+			vim.lsp.enable("htmx")
+			vim.lsp.enable("cssls")
+			vim.lsp.enable("ccls")
+			-- vim.lsp.enable("nil_ls")
+			vim.lsp.enable("lua_ls")
 		end,
 	},
 }
