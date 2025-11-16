@@ -19,7 +19,7 @@
   programs.zsh = {
     enable = true;
 
-    initContent = ''
+    initContent = /* bash */ ''
       source $MY_FOLDER/dotfiles/zsh/.p10k.zsh
       eval "$(zoxide init zsh)"
       bindkey "^[[1;5C" forward-word
@@ -27,9 +27,9 @@
       zstyle ":completion:*" matcher-list "" "m:{a-zA-Z}={A-Za-z}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
       PS1="%F{#008000}%B%n@%m%b %1~:%f"
       export SSH_AUTH_SOCK="$(${config.programs.gpg.package}/bin/gpgconf --list-dirs agent-ssh-socket)"
-      ${pkgs.lib.optionalString (hostname == "macbook") ''
+      ${pkgs.lib.optionalString (hostname == "macbook")  /*bash*/ ''
         source <(fzf --zsh)
-        eval $(ocm handler init)'
+        eval $(ocm handler init)
         export GPG_TTY=$(tty)
         gpgconf --launch gpg-agent
       ''}

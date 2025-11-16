@@ -108,7 +108,7 @@ in
       home.sessionVariables = {
         MY_FOLDER = "/home/canus";
         SCR_PATH = "$MY_FOLDER/scripts";
-        PATH = "$PATH:$MY_FOLDER/scripts/bin-scr:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/:$HOME/.cargo/bin";
+        PATH =   /*bash*/ "$PATH:$MY_FOLDER/scripts/bin-scr:/Users/lucas.contreras/.nix-profile/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:$HOME/.pyenv/bin:/go/bin/:$HOME/.cargo/bin";
         EDITOR = "nvim";
       };
 
