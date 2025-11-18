@@ -1,7 +1,5 @@
 {
   description = "NixOS configuration flake";
-
-  inputs.dmx.url = "github:cargaona/dmx";
   inputs = {
     hyprland = {
       type = "git";

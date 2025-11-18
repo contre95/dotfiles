@@ -5,7 +5,8 @@
     userName = "Contre";
     userEmail = "lucascontre95@gmail.com";
     signing = {
-      key = "E27E9BED3E07CE8F";
+      # key = "E27E9BED3E07CE8F";
+      key = "2114965A0D41234BFCC780099605577C391F7736";
     };
     extraConfig = {
      # url = {
