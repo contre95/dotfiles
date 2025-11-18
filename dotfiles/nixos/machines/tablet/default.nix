@@ -36,6 +36,16 @@
   services.udev.extraRules = ''
     KERNEL=="ttyUSB0", MODE:="666"
     ACTION=="add", ENV{ID_FS_UUID}=="8722-166E", TAG+="systemd", ENV{SYSTEMD_WANTS}+="mnt-ipod.mount"
+
+    # Asus touchpad fixes - ensure proper device classification
+    SUBSYSTEM=="input", ATTRS{name}=="*ASUS*", ATTRS{name}=="*TouchPad*", ENV{LIBINPUT_IGNORE_DEVICE}="0", TAG+="libinput"
+    SUBSYSTEM=="input", ATTRS{name}=="ASUSTeK Computer Inc. GZ302EA-Keyboard Touchpad", ENV{LIBINPUT_IGNORE_DEVICE}="0", TAG+="libinput"
+
+    # Ensure touchscreen is properly identified (not confused with touchpad)
+    SUBSYSTEM=="input", ATTRS{name}=="ELAN9008:00 04F3:43C7", ENV{ID_INPUT_TOUCHSCREEN}="1", ENV{ID_INPUT_TOUCHPAD}="0"
+
+    # Force touchpad identification for the Asus device
+    SUBSYSTEM=="input", ATTRS{name}=="ASUSTeK Computer Inc. GZ302EA-Keyboard Touchpad", ENV{ID_INPUT_TOUCHPAD}="1", ENV{ID_INPUT_MOUSE}="0"
   '';
 
   # Garbace collector
@@ -129,6 +139,7 @@
 
   # Disable AMD GPU runtime power management (fixes SDDM context creation issues)
   boot.kernelParams = [
+    "usbcore.autosuspend=-1"
     "amdgpu.gpu_recovery=1" # fix kernel hang on suspend
     "amdgpu.runpm=1" # Disable runtime power management if it causes issues with SDDM)
     "amdgpu.dc=1" # Enable Display Core
