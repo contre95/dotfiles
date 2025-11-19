@@ -160,7 +160,6 @@ in
         ../programs/gtk.nix
         ../programs/obs.nix
         ../programs/ssh.nix
-        ../programs/zsh.nix
         ../programs/pass.nix
         ../programs/test.nix
         ../programs/discord.nix
