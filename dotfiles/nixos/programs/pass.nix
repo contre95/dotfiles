@@ -21,7 +21,7 @@
   # https://wiki.nixos.org/wiki/Secret_Service
   services.pass-secret-service = {
     enable = true;
-    storePath = "/home/canus/pass/";
+    storePath = "$MY_FOLDER/pass/";
   };
 
 }
