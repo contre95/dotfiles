@@ -288,10 +288,10 @@ return {
 			}
 
 			-- Nix setup
-			vim.lsp.config["nil_ls"] = {
+			vim.lsp.config["nil"] = {
 				capabilities = capabilities,
 				handlers = handlers,
-				filetypes = "nix",
+        		filetypes = { "nix" },
 				settings = {
 					["nil"] = {
 						formatting = {
@@ -332,7 +332,7 @@ return {
 			vim.lsp.enable("htmx")
 			vim.lsp.enable("cssls")
 			vim.lsp.enable("ccls")
-			-- vim.lsp.enable("nil_ls")
+			vim.lsp.enable("nil_ls")
 			vim.lsp.enable("lua_ls")
 		end,
 	},

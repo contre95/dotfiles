@@ -53,6 +53,7 @@ let
     wl-kbptr
     exiftool
     alacritty
+    libsecret
     bandwhich
     coreutils
     util-linux
@@ -82,6 +83,7 @@ in
     ../system/wg-vpn.nix
     ../system/syncthings.nix
     ../programs/steam.nix
+    ../programs/k3s.nix
     ../programs/ai.nix
   ];
 
@@ -158,7 +160,6 @@ in
         ../programs/gtk.nix
         ../programs/obs.nix
         ../programs/ssh.nix
-        ../programs/zsh.nix
         ../programs/pass.nix
         ../programs/test.nix
         ../programs/discord.nix
