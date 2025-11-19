@@ -8,20 +8,11 @@
       ]
     then
       {
-        systemd.services.k3s.serviceConfig.LoadCredential = [
-          "k3s-token:/run/credentials/k3s-token"
-        ];
-
-        systemd.services.k3s.preStart = ''
-          pass Server/K3SToken > /run/credentials/k3s-token
-          chmod 600 /run/credentials/k3s-token
-        '';
-
         services.k3s = {
           enable = true;
           role = "server";
-          tokenFile = "/run/credentials/k3s-token";
-
+          # sudo mkdir -p /etc/k3s && pass "Server/K3SToken" | sudo tee /etc/k3s/token > /dev/null && sudo chmod 600 /etc/k3s/token
+          tokenFile = "/etc/k3s/token";
           extraFlags = toString ([
             "--write-kubeconfig-mode \"0644\""
             "--cluster-init"
