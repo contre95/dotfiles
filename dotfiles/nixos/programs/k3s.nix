@@ -11,6 +11,7 @@
         services.k3s = {
           enable = true;
           role = "server";
+          #pwgen -s -n 16 | head -n1 | pass insert -e Server/K3SToken
           # sudo mkdir -p /etc/k3s && pass "Server/K3SToken" | sudo tee /etc/k3s/token > /dev/null && sudo chmod 600 /etc/k3s/token
           tokenFile = "/etc/k3s/token";
           extraFlags = toString ([

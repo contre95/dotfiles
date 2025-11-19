@@ -25,6 +25,7 @@ let
     id3v2
     zbar
     gimp3
+    pwgen
     iotop
     p7zip
     rsync
