@@ -83,6 +83,7 @@ in
     ../system/wg-vpn.nix
     ../system/syncthings.nix
     ../programs/steam.nix
+    ../programs/zsh.nix
     ../programs/k3s.nix
     ../programs/ai.nix
   ];
