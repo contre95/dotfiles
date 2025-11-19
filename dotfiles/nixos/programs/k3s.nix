@@ -13,7 +13,7 @@
         ];
 
         systemd.services.k3s.preStart = ''
-          secret-tool lookup name K3SToken > /run/credentials/k3s-token
+          pass Server/K3SToken > /run/credentials/k3s-token
           chmod 600 /run/credentials/k3s-token
         '';
 
