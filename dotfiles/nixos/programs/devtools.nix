@@ -16,6 +16,10 @@
     gh-dash
     git-filter-repo
 
+    # K8S
+    kubectx
+    kubectl
+
     # Nix
     nil
     alejandra

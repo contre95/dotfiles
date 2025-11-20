@@ -45,7 +45,6 @@ let
     clipman
     gettext
     gparted
-    kubectl
     ntfy-sh
     pcmanfm
     ripgrep
