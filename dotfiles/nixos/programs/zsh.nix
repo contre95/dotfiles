@@ -94,6 +94,7 @@
       ch = "cliphist list | fzf | cliphist decode";
       kns = "kubectl config set-context --current --namespace=\`ns\`";
       k = "kubectl";
+      kx = "kubectx";
       ct = "mpg123 --quiet $MY_FOLDER/library/sounds/ct.mp3";
       al = "mpg123 --quiet $MY_FOLDER/library/sounds/olx.mp3";
       ed = "mpg123 --quiet $MY_FOLDER/library/sounds/circus.mp3";
