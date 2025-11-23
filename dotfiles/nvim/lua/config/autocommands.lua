@@ -108,6 +108,16 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   command = "set filetype=css",
 })
 
+-- Disable formatting for HTML and Go templates
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.html", "*.htm", "*.gotmpl", "*.tmpl" },
+  callback = function()
+    vim.lsp.buf.format({ filter = function(client)
+      return client.name ~= "html" and client.name ~= "gopls"
+    end })
+  end,
+})
+
 -- Sementary of filetypes autocommands
 
 -- -- Set Logstash filetype (Sad days in my career)

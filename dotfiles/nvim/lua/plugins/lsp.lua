@@ -254,14 +254,15 @@ return {
 				-- end,
 			}
 
-			-- HTML setup
-			vim.lsp.config["html"] = {
-				capabilities = capabilities,
-				handlers = handlers,
-			}
+			-- -- HTML setup
+			-- vim.lsp.config["html"] = {
+			-- 	capabilities = capabilities,
+			-- 	handlers = handlers,
+			-- }
 
 			-- HTMX setup
 			vim.lsp.config["htmx"] = {
+				filetypes = { "html"},
 				capabilities = capabilities,
 				handlers = handlers,
 			}
